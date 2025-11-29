@@ -1,0 +1,10 @@
+{
+  "name": "facebook-clone",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix fb-frontend\" \"npm run dev --prefix fb-backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

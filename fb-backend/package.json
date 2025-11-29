@@ -1,15 +1,9 @@
 {
   "name": "fb-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",

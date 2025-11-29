@@ -15,3 +15,5 @@ yarn-debug.log*
 # IDE files
 .vscode/
 .DS_Store
+
+timeline.txt
