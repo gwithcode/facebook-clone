@@ -1,40 +1,83 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* ==========================
+   Global Color Variables
+   ========================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #0F172A;
+  --color-card: #1E293B;
+  --color-text: #E2E8F0;
+  --color-accent: #3B82F6; /* Accent for focus/hover */
 }
 
+/* Dark mode overrides (optional redundancy) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-bg: #0F172A;
+    --color-card: #1E293B;
+    --color-text: #E2E8F0;
+    --color-accent: #3B82F6;
   }
 }
 
-html,
-body {
+/* ==========================
+   Box-sizing & Reset
+   ========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================
+   Base HTML & Body
+   ========================== */
+html, body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* ==========================
+   Links
+   ========================== */
+body a,
+body a:visited,
+body a:hover,
+body a:active {
+  color: inherit !important;       /* override any CssBaseline */
+  text-decoration: none !important;
+  cursor: pointer;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Optional: subtle hover effect without changing color */
+a:hover {
+  opacity: 0.9;
 }
 
+/* ==========================
+   Utility Classes (Optional)
+   ========================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+p, span, div {
+  color: var(--color-text);
+}
+
+/* ==========================
+   Dark Mode Hint for Browsers
+   ========================== */
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
